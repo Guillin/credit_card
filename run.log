@@ -1,0 +1,122 @@
+*******************   PROCESSING DATA  *******************
+
+2022-07-26 00:41:12,984 - __main__ - INFO - INIT: making final data set from raw data
+2022-07-26 00:41:12,985 - __main__ - INFO - RUN: Loading data
+2022-07-26 00:41:14,710 - __main__ - INFO - RUN: Data size before be processed: (30000, 25)
+2022-07-26 00:41:14,710 - __main__ - INFO - RUN: Processing data
+2022-07-26 00:41:14,716 - __main__ - INFO - RUN: Data size after be processed: (30000, 25)
+2022-07-26 00:41:14,716 - __main__ - INFO - RUN: Saving data
+2022-07-26 00:41:14,844 - __main__ - INFO - END: raw data processed.
+
+*****************  SPLIT TRAIN/TEST ****************
+
+
+*****************  MAKE K FOLDS  ****************
+
+2022-07-26 00:41:15,681 - __main__ - INFO - INIT: creating 5 folds on data/credit_card_clients.csv
+2022-07-26 00:41:15,892 - __main__ - INFO - END: folds created successfully.
+
+*****************  MAKE FEATURES ENGINEER ****************
+
+
+******************* TRAINING CV MODELS *******************
+
+
+2022-07-26 00:41:16,815 - __main__ - INFO - INIT: train  Model=id3_gini
+2022-07-26 00:41:16,815 - __main__ - INFO - RUN: loading data 
+2022-07-26 00:41:16,880 - __main__ - INFO - RUN: training cv Model = 'id3_gini' - Fold = 0
+2022-07-26 00:41:17,291 - __main__ - INFO - Fold=0, roc_auc=0.6094575437049503
+2022-07-26 00:41:17,333 - __main__ - INFO - RUN: training cv Model = 'id3_gini' - Fold = 1
+2022-07-26 00:41:17,770 - __main__ - INFO - Fold=1, roc_auc=0.6172119300037042
+2022-07-26 00:41:17,804 - __main__ - INFO - RUN: training cv Model = 'id3_gini' - Fold = 2
+2022-07-26 00:41:18,243 - __main__ - INFO - Fold=2, roc_auc=0.6239987415077168
+2022-07-26 00:41:18,272 - __main__ - INFO - RUN: training cv Model = 'id3_gini' - Fold = 3
+2022-07-26 00:41:18,717 - __main__ - INFO - Fold=3, roc_auc=0.605308260460169
+2022-07-26 00:41:18,748 - __main__ - INFO - RUN: training cv Model = 'id3_gini' - Fold = 4
+2022-07-26 00:41:19,180 - __main__ - INFO - Fold=4, roc_auc=0.609666405347417
+2022-07-26 00:41:19,205 - __main__ - INFO - END: CV id3_gini - roc_auc - mean=0.613 - std=(0.007)
+Fold=0, roc_auc=0.6094575437049503
+Fold=1, roc_auc=0.6172119300037042
+Fold=2, roc_auc=0.6239987415077168
+Fold=3, roc_auc=0.605308260460169
+Fold=4, roc_auc=0.609666405347417
+
+
+2022-07-26 00:41:20,146 - __main__ - INFO - INIT: train  Model=id3_entropy
+2022-07-26 00:41:20,146 - __main__ - INFO - RUN: loading data 
+2022-07-26 00:41:20,218 - __main__ - INFO - RUN: training cv Model = 'id3_entropy' - Fold = 0
+2022-07-26 00:41:20,721 - __main__ - INFO - Fold=0, roc_auc=0.5999032263942794
+2022-07-26 00:41:20,757 - __main__ - INFO - RUN: training cv Model = 'id3_entropy' - Fold = 1
+2022-07-26 00:41:21,286 - __main__ - INFO - Fold=1, roc_auc=0.6221758305944248
+2022-07-26 00:41:21,323 - __main__ - INFO - RUN: training cv Model = 'id3_entropy' - Fold = 2
+2022-07-26 00:41:21,819 - __main__ - INFO - Fold=2, roc_auc=0.6170773564760024
+2022-07-26 00:41:21,856 - __main__ - INFO - RUN: training cv Model = 'id3_entropy' - Fold = 3
+2022-07-26 00:41:22,374 - __main__ - INFO - Fold=3, roc_auc=0.605708675162726
+2022-07-26 00:41:22,409 - __main__ - INFO - RUN: training cv Model = 'id3_entropy' - Fold = 4
+2022-07-26 00:41:22,930 - __main__ - INFO - Fold=4, roc_auc=0.6060006292292457
+2022-07-26 00:41:22,953 - __main__ - INFO - END: CV id3_entropy - roc_auc - mean=0.610 - std=(0.008)
+Fold=0, roc_auc=0.5999032263942794
+Fold=1, roc_auc=0.6221758305944248
+Fold=2, roc_auc=0.6170773564760024
+Fold=3, roc_auc=0.605708675162726
+Fold=4, roc_auc=0.6060006292292457
+
+
+2022-07-26 00:41:23,927 - __main__ - INFO - INIT: train  Model=rf
+2022-07-26 00:41:23,927 - __main__ - INFO - RUN: loading data 
+2022-07-26 00:41:23,990 - __main__ - INFO - RUN: training cv Model = 'rf' - Fold = 0
+2022-07-26 00:41:24,679 - __main__ - INFO - Fold=0, roc_auc=0.6264838767367766
+2022-07-26 00:41:24,792 - __main__ - INFO - RUN: training cv Model = 'rf' - Fold = 1
+2022-07-26 00:41:25,470 - __main__ - INFO - Fold=1, roc_auc=0.6298887724394706
+2022-07-26 00:41:25,580 - __main__ - INFO - RUN: training cv Model = 'rf' - Fold = 2
+2022-07-26 00:41:26,263 - __main__ - INFO - Fold=2, roc_auc=0.6232365344631596
+2022-07-26 00:41:26,373 - __main__ - INFO - RUN: training cv Model = 'rf' - Fold = 3
+2022-07-26 00:41:27,060 - __main__ - INFO - Fold=3, roc_auc=0.6242881270025775
+2022-07-26 00:41:27,173 - __main__ - INFO - RUN: training cv Model = 'rf' - Fold = 4
+2022-07-26 00:41:27,854 - __main__ - INFO - Fold=4, roc_auc=0.625687252434395
+2022-07-26 00:41:27,956 - __main__ - INFO - END: CV rf - roc_auc - mean=0.626 - std=(0.002)
+Fold=0, roc_auc=0.6264838767367766
+Fold=1, roc_auc=0.6298887724394706
+Fold=2, roc_auc=0.6232365344631596
+Fold=3, roc_auc=0.6242881270025775
+Fold=4, roc_auc=0.625687252434395
+
+
+2022-07-26 00:41:28,893 - __main__ - INFO - INIT: train  Model=lgb
+2022-07-26 00:41:28,893 - __main__ - INFO - RUN: loading data 
+2022-07-26 00:41:28,963 - __main__ - INFO - RUN: training cv Model = 'lgb' - Fold = 0
+2022-07-26 00:41:29,118 - __main__ - INFO - Fold=0, roc_auc=0.6621062716424307
+2022-07-26 00:41:29,160 - __main__ - INFO - RUN: training cv Model = 'lgb' - Fold = 1
+2022-07-26 00:41:29,312 - __main__ - INFO - Fold=1, roc_auc=0.6677719058530374
+2022-07-26 00:41:29,351 - __main__ - INFO - RUN: training cv Model = 'lgb' - Fold = 2
+2022-07-26 00:41:29,509 - __main__ - INFO - Fold=2, roc_auc=0.6532536879516458
+2022-07-26 00:41:29,549 - __main__ - INFO - RUN: training cv Model = 'lgb' - Fold = 3
+2022-07-26 00:41:29,749 - __main__ - INFO - Fold=3, roc_auc=0.6482346355976251
+2022-07-26 00:41:29,785 - __main__ - INFO - RUN: training cv Model = 'lgb' - Fold = 4
+2022-07-26 00:41:29,939 - __main__ - INFO - Fold=4, roc_auc=0.6609550358970128
+2022-07-26 00:41:29,966 - __main__ - INFO - END: CV lgb - roc_auc - mean=0.658 - std=(0.007)
+Fold=0, roc_auc=0.6621062716424307
+Fold=1, roc_auc=0.6677719058530374
+Fold=2, roc_auc=0.6532536879516458
+Fold=3, roc_auc=0.6482346355976251
+Fold=4, roc_auc=0.6609550358970128
+
+
+2022-07-26 00:41:30,915 - __main__ - INFO - INIT: train  Model=xgb
+2022-07-26 00:41:30,915 - __main__ - INFO - RUN: loading data 
+2022-07-26 00:41:30,990 - __main__ - INFO - RUN: training cv Model = 'xgb' - Fold = 0
+2022-07-26 00:41:33,384 - __main__ - INFO - Fold=0, roc_auc=0.6639390195661362
+2022-07-26 00:41:33,422 - __main__ - INFO - RUN: training cv Model = 'xgb' - Fold = 1
+2022-07-26 00:41:35,842 - __main__ - INFO - Fold=1, roc_auc=0.6629432238398818
+2022-07-26 00:41:35,876 - __main__ - INFO - RUN: training cv Model = 'xgb' - Fold = 2
+2022-07-26 00:41:38,260 - __main__ - INFO - Fold=2, roc_auc=0.6503509635674224
+2022-07-26 00:41:38,298 - __main__ - INFO - RUN: training cv Model = 'xgb' - Fold = 3
+2022-07-26 00:41:40,705 - __main__ - INFO - Fold=3, roc_auc=0.653937682700295
+2022-07-26 00:41:40,744 - __main__ - INFO - RUN: training cv Model = 'xgb' - Fold = 4
+2022-07-26 00:41:43,127 - __main__ - INFO - Fold=4, roc_auc=0.6636498906585245
+2022-07-26 00:41:43,155 - __main__ - INFO - END: CV xgb - roc_auc - mean=0.659 - std=(0.006)
+Fold=0, roc_auc=0.6639390195661362
+Fold=1, roc_auc=0.6629432238398818
+Fold=2, roc_auc=0.6503509635674224
+Fold=3, roc_auc=0.653937682700295
+Fold=4, roc_auc=0.6636498906585245
